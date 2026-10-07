@@ -41,6 +41,7 @@ fn main() {
 fn build_themes() {
     let output_dir = PathBuf::from(std::env::var_os("OUT_DIR").expect("OUT_DIR was not set"));
     for name in [
+        "roy-compact-cards.json",
         "classic-usage-widget.json",
         "compact-fluent-quad.json",
         "classic-vertical.json",
