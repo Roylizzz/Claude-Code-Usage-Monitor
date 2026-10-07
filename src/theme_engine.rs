@@ -19,12 +19,17 @@ use crate::models::AppUsageData;
 use crate::providers::{ProviderId, ProviderSet, PROVIDER_DESCRIPTORS};
 
 pub const THEME_SCHEMA_VERSION: u32 = 1;
+pub const ROY_COMPACT_THEME_ID: &str = "roy-compact-cards";
 pub const CLASSIC_THEME_ID: &str = "classic-usage-widget";
 pub const COMPACT_FLUENT_QUAD_THEME_ID: &str = "compact-fluent-quad";
 pub const CLASSIC_VERTICAL_THEME_ID: &str = "classic-vertical";
 pub const MINECRAFT_THEME_ID: &str = "theme-minecraft";
 
 const BUILTIN_THEME_SOURCES: &[(&str, &str)] = &[
+    (
+        ROY_COMPACT_THEME_ID,
+        include_str!(concat!(env!("OUT_DIR"), "/roy-compact-cards.json")),
+    ),
     (
         CLASSIC_THEME_ID,
         include_str!(concat!(env!("OUT_DIR"), "/classic-usage-widget.json")),
